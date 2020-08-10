@@ -10,10 +10,3 @@ toggle.addEventListener("click", () => {
         expansion.classList.remove("active");
     }
 });
-
-
-// function check() {
-//     const toggle = document.querySelector("#toggle").checked = true;
-// }
-
-// check()
