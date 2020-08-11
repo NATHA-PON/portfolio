@@ -10,3 +10,8 @@ toggle.addEventListener("click", () => {
         expansion.classList.remove("active");
     }
 });
+
+// Uncheck Toggle checkbox whenever user re-entry the page.
+window.addEventListener("load", () => {
+    toggle.checked = false;
+})

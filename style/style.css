@@ -92,6 +92,13 @@ header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main {
 
 header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .contact-dropdown-wrapper,
 header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .portfolio-dropdown-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   width: 100%;
   left: 0;
@@ -99,10 +106,9 @@ header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .
   opacity: 0;
   cursor: pointer;
   pointer-events: none;
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #eee;
   border-radius: 5px;
-  padding: 1rem;
   -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
   -webkit-transform: translateY(-1em);
@@ -111,9 +117,18 @@ header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .
   transition: all .2s ease;
 }
 
+header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .contact-dropdown-wrapper:hover li:not(:hover) a,
+header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .portfolio-dropdown-wrapper:hover li:not(:hover) a {
+  color: #C3C3C3;
+}
+
 header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .contact-dropdown-wrapper > *,
 header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .portfolio-dropdown-wrapper > * {
-  margin: 1rem 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: .7rem 1.3rem;
+  width: 100%;
 }
 
 header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .contact-dropdown-wrapper::before,
@@ -138,17 +153,6 @@ header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .
   display: block;
   font-size: 14px;
   color: #C3C3C3;
-}
-
-header .innner-wrapper-nav .nav-links .inner-control-nav-links .list-item-main .side-bar-on-hover {
-  width: 3px;
-  height: 50px;
-  background-color: #42b883;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  -webkit-transition: all 0.1s cubic-bezier(0.23, -0.44, 0.96, 1.95);
-  transition: all 0.1s cubic-bezier(0.23, -0.44, 0.96, 1.95);
 }
 
 header .innner-wrapper-nav .nav-links .inner-control-nav-links .contact-list-item:hover > .contact-dropdown-wrapper {
@@ -248,6 +252,23 @@ header .expansion.active {
 
 header .expansion ul {
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .expansion ul li {
+  margin: .5rem 0;
 }
 
 header .expansion ul li a {
